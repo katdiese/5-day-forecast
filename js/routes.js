@@ -13,6 +13,9 @@
       .when('/', {
         template: '<landing></landing>'
       })
+      .when('/#/weather', {
+        template: '<weather></weather>'
+      });
   }
 
 })();
