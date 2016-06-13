@@ -3,4 +3,22 @@
   width: 100%;
   background-image: url('/images/sunshine.jpg');
   background-size: cover;
+  display: flex;
+}
+.city-search {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
 }
