@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e,t){return{setCity:function(e){t.city=e},getWeather:function(t){return e.get("http://api.openweathermap.org/data/2.5/forecast?q="+t+",us&units=imperial&APPID=3c438ab921656e7189ededb4dbb9bb82")}}}angular.module("weatherApp").service("weatherService",e),e.$inject=["$http","$rootScope"]}();

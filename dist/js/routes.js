@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e){e.when("/",{template:"<landing></landing>"}).when("/weather",{template:"<weather></weather>"}).otherwise({redirectTo:"/"})}angular.module("weatherApp").config(e),e.$inject=["$routeProvider"]}();

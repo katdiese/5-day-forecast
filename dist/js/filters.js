@@ -1,0 +1,1 @@
+!function(){"use strict";function n(){return function(n){return n.slice(0,10)}}function t(){return function(n){return n.slice(11,16)}}angular.module("weatherApp").filter("timeOnly",t).filter("dateOnly",n)}();
