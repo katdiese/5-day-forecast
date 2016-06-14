@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/css/main.css">
     <link rel="stylesheet" type="text/css" href="styles/css/skeleton.css">
   </head>
-  <body>
+  <body ng-cloak>
     <!-- sample angular code -->
     <div ng-view></div>
 
@@ -23,6 +23,8 @@
 
     <script type="text/javascript" src="js/services.js"></script>
 
+    <script type="text/javascript" src="js/filters.js"></script>
+
     <!-- Landing component -->
     <script type="text/javascript" src="components/landing/landing.controller.js"></script>
     <script type="text/javascript" src="components/landing/landing.directive.js"></script>
@@ -30,10 +32,6 @@
     <!-- Weather component -->
     <script type="text/javascript" src="components/weather/weather.controller.js"></script>
     <script type="text/javascript" src="components/weather/weather.directive.js"></script>
-
-    <!-- Forecast component -->
-    <script type="text/javascript" src="components/forecast/forecast.controller.js"></script>
-    <script type="text/javascript" src="components/forecast/forecast.directive.js"></script>
 
   </body>
 </html>
