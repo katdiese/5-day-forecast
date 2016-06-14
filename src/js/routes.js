@@ -13,9 +13,10 @@
       .when('/', {
         template: '<landing></landing>'
       })
-      .when('/#/weather', {
+      .when('/weather', {
         template: '<weather></weather>'
-      });
+      })
+      .otherwise({redirectTo: '/'});
   }
 
 })();
