@@ -15,7 +15,6 @@
 
       vm.setCity = function(city) {
         weatherService.setCity(vm.currCity);
-        console.log('root scope', $rootScope.city);
       }
 
 
