@@ -18,14 +18,6 @@
         console.log('root scope', $rootScope.city);
       }
 
-      vm.getInfo = function() {
-        weatherService.getWeather('Indianapolis')
-        .then(function(data) {
-          console.log(data);
-        })
-      }
-
-      // vm.getInfo();
 
     }
 
