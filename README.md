@@ -3,6 +3,7 @@ An Angular App to tell you the weather.
 
 ### Tools:
 * Angular.js
+* [John Papa Style Guide](https://github.com/johnpapa/angular-styleguide)
 * Sass
 * Html5
 * [Skeleton Framework](http://getskeleton.com/) (for Grid)
