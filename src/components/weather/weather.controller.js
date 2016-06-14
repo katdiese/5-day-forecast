@@ -6,13 +6,13 @@
     .module('weatherApp')
     .controller('WeatherCtrl', WeatherCtrl);
 
-    WeatherCtrl.$inject = ['weatherService'];
+    WeatherCtrl.$inject = ['$rootScope', 'weatherService'];
 
-    function WeatherCtrl(weatherService) {
+    function WeatherCtrl($rootScope, weatherService) {
       var vm = this;
 
       vm.getInfo = function() {
-        weatherService.getWeather('Indianapolis')
+        weatherService.getWeather($rootScope.city)
         .then(function(data) {
           console.log(data);
         })

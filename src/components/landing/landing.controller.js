@@ -6,10 +6,17 @@
     .module('weatherApp')
     .controller('LandingCtrl', LandingCtrl);
 
-    LandingCtrl.$inject = ['weatherService'];
+    LandingCtrl.$inject = ['$rootScope','weatherService'];
 
-    function LandingCtrl(weatherService) {
+    function LandingCtrl($rootScope, weatherService) {
       var vm = this;
+
+      vm.currCity;
+
+      vm.setCity = function(city) {
+        weatherService.setCity(vm.currCity);
+        console.log('root scope', $rootScope.city);
+      }
 
       vm.getInfo = function() {
         weatherService.getWeather('Indianapolis')
@@ -18,7 +25,7 @@
         })
       }
 
-      vm.getInfo();
+      // vm.getInfo();
 
     }
 
