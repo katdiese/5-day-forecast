@@ -2,8 +2,8 @@
   <div class="city-search">
     <h2>Enter in a city to see the 5 day forecast</h2>
     <form>
-      <input type="text">
-      <button type="submit">Submit</button>
+      <input ng-model="vm.currCity" type="text">
+      <a href="/#/weather"><button ng-click="vm.setCity()">Submit</button></a>
     </form>
   </div>
 </div>
