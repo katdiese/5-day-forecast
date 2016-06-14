@@ -12,17 +12,26 @@
       var vm = this;
 
       vm.cityName;
+      vm.day1Forecast = [];
 
       vm.getInfo = function() {
         weatherService.getWeather($rootScope.city)
         .then(function(data) {
-          vm.cityName = data.data.city.name;
           var fullForecast = data.data.list;
-          vm.day1Forecast = fullForecast.slice(0,7);
-          vm.day2Forecast = fullForecast.slice(7,15);
-          vm.day3Forecast = fullForecast.slice(15,23);
-          vm.day4Forecast = fullForecast.slice(23,31);
-          vm.day5Forecast = fullForecast.slice(31,39);
+          var currDate = fullForecast[0].dt_txt.slice(0,10);
+          var num = 0;
+          var startingNum;
+
+          vm.cityName = data.data.city.name;
+          while(fullForecast[num].dt_txt.slice(0,10) === currDate) {
+            vm.day1Forecast.push(fullForecast[num]);
+            var startingNum = num;
+            num++;
+          }
+          vm.day2Forecast = fullForecast.slice(num,num+=8);
+          vm.day3Forecast = fullForecast.slice(num,num+=8);
+          vm.day4Forecast = fullForecast.slice(num,num+=8);
+          vm.day5Forecast = fullForecast.slice(num,num+=8);
         })
       }
 
